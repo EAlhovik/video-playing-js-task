@@ -1,0 +1,8 @@
+{
+  "name": "video-playing-web-app",
+  "private": true,
+  "dependencies": {
+    "knockout": "^3.4.0",
+    "flexboxgrid": "^6.3.0"
+  }
+}
