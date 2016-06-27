@@ -3,6 +3,7 @@
   "private": true,
   "dependencies": {
     "knockout": "^3.4.0",
-    "flexboxgrid": "^6.3.0"
+    "flexboxgrid": "^6.3.0",
+    "requirejs": "^2.2.0"
   }
 }
