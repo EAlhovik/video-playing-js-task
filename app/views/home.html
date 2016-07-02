@@ -1,0 +1,25 @@
+<div class="row" ng-if="movie">
+    <div class="col-md-12" >
+        <video controls="" width="100%" poster="images/{{movie.images.placeholder}}">
+            <source ng-repeat="stream in movie.streams" type="video/{{stream.type}}" src="{{trustSrc(stream.url)}}"  >
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="row start-xs" >
+        <div class="col-md-12"><h1>{{movie.title}} (<time>({{movie.meta.releaseYear}})</time>)</h1></div>
+        <div class="col-md-12">Director: <span ng-repeat="director in movie.meta.directors">{{director.name}}&nbsp;</span></div>
+        <div class="col-md-12">Writers: <span ng-repeat="actor in movie.meta.actors">{{actor.name}}&nbsp;</span></div>
+    </div>
+</div>
+
+<div class="row" >
+    <div class="col-md-3" ng-repeat="movie in movies">
+        <div class="box">
+            <a href="#" ng-click="playCurrentMovie(movie)">
+                <img src="images/{{movie.images.cover}}">
+                <div>{{movie.title}}</div>
+                <time>{{movie.meta.releaseYear}}</time>
+            </a>
+        </div>
+    </div>
+</div>
